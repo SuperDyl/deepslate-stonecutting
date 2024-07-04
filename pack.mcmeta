@@ -1,6 +1,12 @@
 {
 	"pack": {
-		"description": "Stonecutter crafting recipes for deepslate",
+		"description": [
+			{ "text": "v1.0.0", "color": "green" },
+			{
+				"text": "\nDeepslate recipes in stonecutters",
+				"color": "yellow"
+			}
+		],
 		"pack_format": 48
 	}
 }
