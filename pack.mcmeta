@@ -1,12 +1,27 @@
 {
 	"pack": {
 		"description": [
-			{ "text": "v1.0.0", "color": "green" },
+			{ "text": "v1.1.1", "color": "green" },
 			{
 				"text": "\nDeepslate recipes in stonecutters",
 				"color": "yellow"
 			}
 		],
-		"pack_format": 71
+		"pack_format": 71,
+		"supported_formats": {
+			"min_inclusive": 48,
+			"max_inclusive": 71
+		}
+	},
+	"overlays": {
+		"entries": [
+			{
+				"directory": "overlay-1.21.2-present",
+				"formats": {
+					"min_inclusive": 57,
+					"max_inclusive": 2147483647
+				}
+			}
+		]
 	}
 }
