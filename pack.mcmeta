@@ -9,7 +9,7 @@
 		],
 		"pack_format": 71,
 		"supported_formats": {
-			"min_inclusive": 18,
+			"min_inclusive": 7,
 			"max_inclusive": 71
 		}
 	},
