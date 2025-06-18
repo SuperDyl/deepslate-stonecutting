@@ -1,0 +1,45 @@
+name: Publish
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Zip files
+        uses: montudor/action-zip@v1
+        with:
+          args: zip -qq -r ${{ github.event.release.name }}.zip . -x ".*"
+
+      - name: Upload to Modrinth
+        uses: cloudnode-pro/modrinth-publish@v2
+        with:
+          token: ${{ secrets.MODRINTH_TOKEN }}
+          project: n60QvxJE
+          featured: true
+          status: listed
+          channel: release
+          name: ${{ github.event.release.name }}
+          version: ${{ github.event.release.tag_name }}
+          changelog: ${{ github.event.release.body }}
+          loaders: |-
+            datapack
+          game-versions: |-
+            1.17.X
+            1.18.X
+            1.19.X
+            1.20.X
+            1.21
+            1.21.1
+            1.21.2
+            1.21.3
+            1.21.4
+            1.21.5
+            1.21.6
+          files: ${{ github.event.release.name }}.zip
