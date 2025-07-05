@@ -1,17 +1,17 @@
 {
 	"pack": {
 		"description": [
-			{ "text": "v1.1.2", "color": "green" },
+			{ "text": "v1.1.3", "color": "green" },
 			{
 				"text": "\nDeepslate recipes in stonecutters",
 				"color": "white"
 			},
 			{ "text": "\nBy SuperDyl", "color": "white" }
 		],
-		"pack_format": 80,
+		"pack_format": 81,
 		"supported_formats": {
 			"min_inclusive": 7,
-			"max_inclusive": 80
+			"max_inclusive": 81
 		}
 	},
 	"overlays": {
